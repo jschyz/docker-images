@@ -14,9 +14,9 @@ RUN apk add --update openssl; \
   # tuling plugin can be get here:
   # https://github.com/littlecodersh/EasierLife/tree/master/Plugins/Tuling
   wget https://raw.githubusercontent.com/littlecodersh/EasierLife/master/Plugins/Tuling/tuling.py \
-    https://raw.githubusercontent.com/littlecodersh/EasierLife/master/Plugins/Tuling/tuling.json
+    https://raw.githubusercontent.com/littlecodersh/EasierLife/master/Plugins/Tuling/tuling.json \
+    # Main script behind itchat robot
+    # https://gist.github.com/littlecodersh/ec8ddab12364323c97d4e36459174f0d
+    https://gist.githubusercontent.com/littlecodersh/ec8ddab12364323c97d4e36459174f0d/raw/73017604aef437970d5c441923cd6bc58e9b8f57/main.py
 
-# https://docs.docker.com/engine/reference/builder/#add
-ADD robot.py /robot/
-
-CMD ["python", "robot/robot.py"]
+CMD ["python", "robot/main.py"]
