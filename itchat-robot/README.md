@@ -8,6 +8,7 @@ $ docker build -t robot .
 $ docker run -it robot
 ```
 
+如果出现二维码乱掉了，请在 `robot/main.py` 文件修改
 ```
 # 如部分的linux系统，块字符的宽度为一个字符（正常应为两字符），故赋值为2
 itchat.auto_login(enableCmdQR=2)
